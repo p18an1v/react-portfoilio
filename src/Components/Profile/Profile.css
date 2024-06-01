@@ -15,7 +15,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 25px;
-  flex-direction: row; /* Ensure flex-direction is row */
+  flex-direction: row;
   background-color: transparent;
 }
 
@@ -46,21 +46,20 @@
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
   border-radius: 5px;
-  position: absolute;
-  left: 25px; /* Adjust the left position as needed */
-  top: 65%; /* Center the button vertically */
+  position: relative; /* Changed from absolute */
+  margin-top: 10px; /* Adjusted for spacing */
 }
 
 .profile-btn:hover {
-  background-color:  #218838; 
+  background-color: #218838;
   transform: translateY(-2px);
 }
 
 .profile-pic-container {
   position: absolute;
   right: 20px;
-  top: 50%; /* Center the picture vertically */
-  transform: translateY(-50%); /* Adjust for centering */
+  top: 50%;
+  transform: translateY(-50%);
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -73,6 +72,68 @@
   height: 100%;
   object-fit: cover;
 }
+
+@media (max-width: 768px) {
+  .banner {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+  }
+
+  .profile-info {
+    max-width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .profile-info h2 {
+    font-size: 2rem;
+  }
+
+  .profile-info p {
+    font-size: 1rem;
+  }
+
+  .profile-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    position: relative;
+    margin-top: 10px;
+  }
+
+  .profile-pic-container {
+    position: static;
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .profile-info h2 {
+    font-size: 1.5rem;
+  }
+
+  .profile-info p {
+    font-size: 0.9rem;
+  }
+
+  .profile-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    position: relative;
+    margin-top: 10px;
+  }
+
+  .profile-pic-container {
+    width: 80px;
+    height: 80px;
+    margin-top: 10px;
+  }
+}
+
+
 
 
 

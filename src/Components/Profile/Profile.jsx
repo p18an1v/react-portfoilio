@@ -2,11 +2,9 @@ import React from 'react';
 import './Profile.css';
 import bannerImage from '../../assets/banner_prefinal_one.png';
 import cvFile from '../../assets/Pranav_Mhargude.pdf';
-
 import pranav_profile from '../../assets/pranav_profile.jpeg';
 
 const Profile = () => {
-  
 
   const downloadCV = () => {
     const link = document.createElement('a');
@@ -18,10 +16,10 @@ const Profile = () => {
   const redirectToLinkedIn = () => {
     window.location.href = 'https://www.linkedin.com/in/pranav-mhargude-58b366234/';
   };
+
   return (
     <div className="profile" style={{ marginTop: '20px' }} id='profile'>
-      <div className="banner"
-        style={{ backgroundImage: `url(${bannerImage})` }}>
+      <div className="banner" style={{ backgroundImage: `url(${bannerImage})` }}>
         <div className="profile-info"> 
           <h2>Pranav Mhargude</h2>
           <p>pranavmhargude@gmail.com</p>
@@ -37,5 +35,5 @@ const Profile = () => {
 
 export default Profile;
 
-//"https://upload.wikimedia.org/wikipedia/commons/2/2c/Default_pfp.svg"
+
 
