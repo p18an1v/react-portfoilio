@@ -1,0 +1,28 @@
+.new-about-container {
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: var(--card-primary);
+    margin-top: 25px;
+  }
+  
+  .new-about-content {
+    max-width: 600px;
+    background-color: var(--card-primary);
+  }
+  
+  .new-about-content h2 {
+    color: whitesmoke;
+    font-size: 36px;
+    margin-bottom: 20px;
+    background-color: var(--card-primary);
+  }
+  
+  .new-about-content p {
+    color: whitesmoke;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    background-color: var(--card-primary);
+  }
+  

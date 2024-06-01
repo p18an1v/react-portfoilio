@@ -1,0 +1,94 @@
+/* Overall container style */
+.skills {
+  padding: 20px;
+  color: var(--text-primary);
+  font-family: Arial, sans-serif;
+}
+
+/* Heading style */
+.skills h3 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: var(--text-highlight);
+}
+
+/* Grid layout for skills */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Individual skill category */
+.skills-category {
+  padding: 20px;
+  border-radius: 10px;
+  background-color: var(--card-primary);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.skills-category:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Skill category header */
+.category-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  background-color: transparent;
+}
+
+/* Icon style */
+.category-header svg {
+  fill: var(--text-secondary);
+  margin-right: 10px;
+  background-color: transparent;
+}
+
+/* Category title style */
+.category-header h4 {
+  font-size: 20px;
+  color: var(--text-highlight);
+  margin: 0;
+  background-color: transparent;
+}
+
+/* Skills list using flexbox */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background-color: transparent;
+}
+
+/* Skill item style */
+.skill {
+  padding: 8px 12px;
+  border-radius: 5px;
+  background-color: var(--btn-primary);
+  color: var(--text-highlight);
+  font-size: 14px;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+/* Border color changes based on skill level */
+.skill.green {
+  border-color: var(--btn-highlight); /* Green border for well-known skills */
+}
+
+.skill.yellow {
+  border-color: #ffd700; /* Yellow border for moderately known skills */
+}
+
+.skill.red {
+  border-color: #ff0000; /* Red border for skills with little knowledge */
+}
+
+/* Hover effect on skill item */
+.skill:hover {
+  border-color: var(--btn-highlight);
+}

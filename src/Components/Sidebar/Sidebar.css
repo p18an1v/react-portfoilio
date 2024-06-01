@@ -1,0 +1,324 @@
+:root {
+  --sidebar-bg: linear-gradient(to bottom, #242424, #111);
+  --sidebar-hover: #333;
+  --sidebar-active: #2bd576;
+  --sidebar-icon-size: 20px;
+  --sidebar-padding: 15px 20px;
+  --sidebar-radius: 15px;
+  --sidebar-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  --sidebar-text-color: #fff;
+  --sidebar-hover-color: #2bd576;
+  --profile-bg: #333;
+  --transition: all 0.3s ease-in-out;
+}
+
+.sidebar {
+  width: 370px;
+  background: var(--sidebar-bg);
+  color: var(--sidebar-text-color);
+  max-height: 730px;
+  position: fixed;
+  top: 10px;
+  bottom: 20px;
+  overflow-y: auto;
+  padding-top: 20px;
+  border-radius: var(--sidebar-radius);
+  border-bottom-left-radius: var(--sidebar-radius);
+  border-bottom-right-radius: var(--sidebar-radius);
+  box-shadow: var(--sidebar-shadow);
+  z-index: 100;
+  transition: var(--transition);
+  margin-top: -38px;
+  margin-left: 50px;
+  width: 400px;
+}
+
+.sidebar.collapsed {
+  width: 50px;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  padding: var(--sidebar-padding);
+  background-color: var(--profile-bg);
+  border-radius: 10px;
+  margin: 0 20px 20px 20px;
+  transition: var(--transition);
+}
+
+.profile-section:hover {
+  background-color: var(--sidebar-hover);
+}
+
+.profile-section.collapsed {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-section.collapsed h4,
+.profile-section.collapsed p {
+  display: none;
+}
+
+.sidebar-item,
+.sidebar-social-item {
+  display: flex;
+  align-items: center;
+  padding: var(--sidebar-padding);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 16px;
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+}
+
+.sidebar-item i,
+.sidebar-social-item i {
+  margin-right: 10px;
+  font-size: var(--sidebar-icon-size);
+  transition: transform 0.3s;
+  background-color: transparent;
+}
+
+.sidebar-item:hover,
+.sidebar-social-item:hover {
+  background-color: var(--sidebar-hover);
+}
+
+.sidebar-item:hover i,
+.sidebar-social-item:hover i {
+  color: var(--sidebar-hover-color);
+  transform: scale(1.2);
+}
+
+.sidebar-item.active,
+.sidebar-social-item.active {
+  background-color: var(--sidebar-active);
+}
+
+.sidebar-item.active i,
+.sidebar-social-item.active i {
+  color: #fff;
+}
+
+.sidebar-item::after,
+.sidebar-social-item::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background-color: var(--sidebar-active);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.sidebar-item.active::after,
+.sidebar-social-item.active::after {
+  opacity: 1;
+}
+
+.sidebar-item.collapsed,
+.sidebar-social-item.collapsed {
+  justify-content: center;
+}
+
+.sidebar-item.collapsed span,
+.sidebar-social-item.collapsed span {
+  display: none;
+}
+
+.sidebar-socials {
+  margin-top: 20px;
+}
+
+.sidebar-social-item:hover {
+  background-color: var(--sidebar-hover);
+}
+
+.sidebar-social-item:hover i {
+  color: var(--sidebar-hover-color);
+}
+
+.sidebar-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--sidebar-padding);
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar-toggle i {
+  font-size: var(--sidebar-icon-size);
+  transition: transform 0.3s;
+}
+
+.sidebar-toggle:hover {
+  background-color: var(--sidebar-hover);
+}
+
+.sidebar-toggle:hover i {
+  color: var(--sidebar-hover-color);
+  transform: rotate(180deg);
+}
+
+/* Collapsible Section */
+.collapsible {
+  background-color: var(--profile-bg);
+  color: var(--sidebar-text-color);
+  cursor: pointer;
+  padding: var(--sidebar-padding);
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: background-color 0.3s;
+}
+
+.collapsible:hover {
+  background-color: var(--sidebar-hover);
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: var(--sidebar-text-color);
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 20px;
+  display: none;
+  overflow: hidden;
+  background-color: var(--profile-bg);
+  border-radius: 0 0 10px 10px;
+}
+
+.tooltip {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--sidebar-hover);
+  color: var(--sidebar-text-color);
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.sidebar-item.collapsed:hover .tooltip,
+.sidebar-social-item.collapsed:hover .tooltip {
+  opacity: 1;
+}
+
+.sidebar-item span,
+.sidebar-social-item span {
+  background-color: transparent;
+}
+
+/* Overlay */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  transition: opacity 0.3s;
+}
+
+.sidebar-overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 250px;
+  }
+
+  .sidebar.collapsed {
+    width: 0;
+  }
+  
+  .sidebar-overlay {
+    display: block;
+  }
+
+  .sidebar-overlay.collapsed {
+    display: none;
+  }
+}
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99;
+  transition: opacity 0.3s;
+}
+
+.sidebar-overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+.open-sidebar-button {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+/*/* Existing CSS */
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 250px;
+  }
+
+  .sidebar.collapsed {
+    width: 0;
+  }
+  
+  .sidebar-overlay {
+    display: block;
+  }
+
+  .open-sidebar-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 101; /* Ensure it's above the sidebar overlay */
+  }
+}

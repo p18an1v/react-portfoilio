@@ -1,0 +1,77 @@
+.contact-container {
+  padding: 1rem; /* Reduced padding */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--card-primary);
+  margin-bottom: 25px;
+}
+
+.contact-container h2 {
+  text-align: left;
+  margin-bottom: 0.75rem; /* Further reduced margin-bottom */
+  font-size: 2.5rem; /* Further reduced font size */
+  color: whitesmoke;
+  background-color: transparent;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* Further reduced gap */
+  background-color: transparent;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0; /* Further reduced margin */
+}
+
+.form-group label {
+  margin-bottom: 0.25rem; /* Maintained margin-bottom */
+  color: hsl(210, 100%, 45%);
+  font-size: 1.25rem; /* Reduced font size */
+  background-color: var(--card-primary);
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.5rem; /* Maintained padding */
+  border-radius: 6px; /* Maintained border radius */
+  border: 1px solid #ccc;
+  font-size: 0.9rem; /* Maintained font size */
+  color: whitesmoke;
+  background-color: var(--input-background); /* Ensure input background color */
+}
+
+.form-group textarea {
+  resize: vertical; /* Allow vertical resize */
+  min-height: 60px; /* Further reduced minimum height */
+}
+
+button {
+  padding: 0.5rem 1rem; /* Maintained padding */
+  border-radius: 6px; /* Maintained border radius */
+  border: none;
+  background-color: #2bd576;
+  color: white;
+  font-size: 1rem; /* Maintained font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Added transition for hover effect */
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+button:hover {
+  background-color: #1b924d;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .contact-container {
+    padding: 0.5rem;
+  }
+}
+
+
+

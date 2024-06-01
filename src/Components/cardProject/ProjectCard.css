@@ -1,0 +1,114 @@
+.project-card-link {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .project-card {
+    width: 18rem;
+    margin: 1rem;
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    margin-top: 2rem; 
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .project-card-image-container {
+    position: relative;
+  }
+  
+  .project-card-img {
+    height: 180px;
+    object-fit: cover;
+    transition: opacity 0.3s;
+  }
+  
+  .project-card-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .project-card:hover .project-card-overlay {
+    opacity: 1;
+  }
+  
+  .project-card-button {
+    background-color: #2bd576;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+  
+  .project-card-body {
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--card-primary);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .project-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: whitesmoke;
+    background-color: transparent;
+  }
+  
+  .project-card-text {
+    font-size: 1rem;
+    color: #bbbbbb;
+    flex-grow: 1;
+    background-color: transparent;
+  }
+  
+.project-show-more-button {
+    margin-top: 20px;
+    background-color: #2bd576; /* Green color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 15px; /* Border radius */
+    transition: background-color 0.3s;
+  }
+  
+  .project-show-more-button:hover {
+    background-color: #218838; /* Darker green on hover */
+  }
+
+    
+.project-card-button {
+    margin-top: 20px;
+    background-color: #2bd576; /* Green color */
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    border-radius: 10px; /* Border radius */
+   
+  }
+
+  
+/* Additional margin for the first project card after Show More */
+.project-card.show-more-margin {
+    margin-top: 2%;
+}

@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #121212;
+  color: #fff;
+  height: 100%;
+  position: fixed;
+  top: 56px; /* Adjust based on the height of your Navbar */
+  bottom: 0;
+  overflow-y: auto;
+  padding-top: 20px;
+  border-right: 1px solid #333;
+}
+
+.content {
+  margin-left: 250px; /* Adjust to match the width of the sidebar */
+  padding: 20px;
+  overflow-y: auto;
+  height: calc(100vh - 56px); /* Adjust based on the height of your Navbar */
+  background-color: #1e1e1e;
+}
+
+.custom-navbar {
+  background-color: #000;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #333;
+}
+
+.custom-navbar .navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.custom-navbar .custom-nav-link {
+  margin: 0 15px;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.custom-navbar .custom-nav-link:hover {
+  color: #007bff;
+}
+
+.custom-navbar .btn-light {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.custom-navbar .btn-light:hover {
+  background-color: #e6e6e6;
+  color: #000;
+}
+
+.custom-navbar .ml-auto {
+  margin-left: auto;
+}
+html {
+  scroll-behavior: smooth;
+}
+.content {
+  margin-left: 250px; /* Adjust to match the width of the sidebar */
+  padding: 20px;
+  overflow-y: auto;
+  height: calc(100vh - 56px); /* Adjust based on the height of your Navbar */
+  background-color: #1e1e1e;
+  padding: 20px;
+}
